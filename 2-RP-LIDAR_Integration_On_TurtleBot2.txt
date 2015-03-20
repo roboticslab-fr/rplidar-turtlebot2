@@ -1,0 +1,23 @@
+RP-LIDAR integration on TurtleBot2
+
+HowTo - v1.0 - 29/01/2015
+tested on ROS Groovy and Hydro
+
+R. GROSLEVIN, R. DUVERNE, R. SEULIN
+
+Proceed with rp lidar setup (see 1-RP-LIDAR_Setup_HowTo.txt)
+
+download catkin packages on THE NAS FOLDER //roboticsprojects/Documentation/RP-LiDAR/turtlebot_le2i
+compile them
+
+to test that your lidar integration on TB2 is OK do the following :
+
+	on the TB2 netbook:
+	roslaunch turtlebot_le2i rplidar_minimal.launch
+	(instead of roslaunch turtlebot_bringup minimal.launch)
+
+	on the workstation:
+	roslaunch turtlebot_rviz_launchers view_robot.launch
+
+	activate the /scan topic to chek if the lidar data is correctly captured and displayed
+

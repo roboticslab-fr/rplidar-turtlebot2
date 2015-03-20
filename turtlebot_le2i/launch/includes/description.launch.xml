@@ -1,0 +1,9 @@
+<launch>
+	<arg name="base"/>
+	<arg name="stacks"/>
+	<arg name="rplidar_sensor"/>
+	
+	<arg name="urdf_file" default="$(find xacro)/xacro.py '$(find turtlebot_le2i)/robots/$(arg base)_$(arg stacks)_$(arg rplidar_sensor).urdf.xacro'" />
+	
+	<param name="robot_description" command="$(arg urdf_file)" />
+</launch>
