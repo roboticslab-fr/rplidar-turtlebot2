@@ -1,4 +1,4 @@
-#RP-LiDAR on TurtleBot2 HowTo - v2.0 ! Update to ROS HYDRO !
+#RP-LiDAR on TurtleBot2 with ROS HYDRO
 
 ##Notes
 We performed some updates on our Workstations and TurtleBot2 Netbooks.
