@@ -22,28 +22,28 @@ Download the catkin packages and study the 2 howto files located :
 - or at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
 
 ##Install the ROS-BY-EXAMPLE code for HYDRO
-Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.1 for HYDRO
-Follow instructions from:
+Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.1 for HYDRO and follow instructions from the following sub-chapters.
+
 ###5.1 Installing the Prerequisites
-```$ sudo apt-get install ros-hydro-turtlebot-* \
-ros-hydro-openni-camera ros-hydro-openni-launch \
-ros-hydro-openni-tracker ros-hydro-laser-* \
-ros-hydro-audio-common ros-hydro-joystick-drivers \
-ros-hydro-orocos-kdl ros-hydro-python-orocos-kdl \
-ros-hydro-dynamixel-motor-* ros-hydro-pocketsphinx \
-gstreamer0.10-pocketsphinx python-setuptools python-rosinstall \
-ros-hydro-opencv2 ros-hydro-vision-opencv \
-ros-hydro-depthimage-to-laserscan ros-hydro-arbotix-* \
-git subversion mercurial```
+	sudo apt-get install ros-hydro-turtlebot-* \
+	ros-hydro-openni-camera ros-hydro-openni-launch \
+	ros-hydro-openni-tracker ros-hydro-laser-* \
+	ros-hydro-audio-common ros-hydro-joystick-drivers \
+	ros-hydro-orocos-kdl ros-hydro-python-orocos-kdl \
+	ros-hydro-dynamixel-motor-* ros-hydro-pocketsphinx \
+	gstreamer0.10-pocketsphinx python-setuptools python-rosinstall \
+	ros-hydro-opencv2 ros-hydro-vision-opencv \
+	ros-hydro-depthimage-to-laserscan ros-hydro-arbotix-* \
+	git subversion mercurial
 
 ###5.2 Cloning the Hydro ros-by-example Repository
 ####5.2.3 Cloning the rbx1 repository for Hydro
-	$ cd ~/catkin_ws/src
-	$ git clone https://github.com/pirobot/rbx1.git
-	$ cd rbx1
-	$ git checkout hydro-devel
-	$ cd ~/catkin_ws
-	$ catkin_make
+	cd ~/catkin_ws/src
+	git clone https://github.com/pirobot/rbx1.git
+	cd rbx1
+	git checkout hydro-devel
+	cd ~/catkin_ws
+	catkin_make
 ##Create a map with gmapping
 
 In the rbx1_nav package paste the following launch files (located in /rplidar_gmapping folder)
@@ -63,7 +63,7 @@ In the rbx1_nav package paste the following launch files (located in /rplidar_gm
 
 	roslaunch turtlebot_teleop keyboard_teleop.launch
 
-	**navigate slowly with the teleoperation to create the map**
+**navigate slowly with the teleoperation to create the map**
 
 ###save the map
 	
@@ -79,7 +79,7 @@ Copy the map created previously (example with arena.pgm and arena.yaml files) in
 
 	roslaunch turtlebot_le2i remap_rplidar_minimal.launch
 
-	__!!! NB: remapping /mobile_base/commands/velocity to cmd_vel !!!__
+**!!! NB: remapping /mobile_base/commands/velocity to cmd_vel !!!**
 
 	roslaunch rbx1_nav tb_demo_amcl.launch map:=arena.yaml
 
