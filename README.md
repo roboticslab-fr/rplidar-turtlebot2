@@ -1,7 +1,7 @@
 #RP-LiDAR on TurtleBot2 HowTo - v2.0 ! Update to ROS HYDRO !
 
 ##Notes
-We performed some updates on the Workstations and TurtleBot2 Netbooks.
+We performed some updates on our Workstations and TurtleBot2 Netbooks.
 
 Every workstations and netbooks are now configured with ROS HYDRO.
 
@@ -18,8 +18,8 @@ In order to create a Map and then perform autonomous navigation follow carrefull
 ##LiDAR integration on the TurtleBot2
 
 Download the catkin packages and study the 2 howto files located :
-- on the NAS : //roboticsprojects/Documentation/RP-LiDAR/
-- at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
+- on our lab NAS : //roboticsprojects/Documentation/RP-LiDAR/
+- or at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
 
 ##Install the ROS-BY-EXAMPLE code for HYDRO
 Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.1 for HYDRO
@@ -38,12 +38,12 @@ git subversion mercurial```
 
 ###5.2 Cloning the Hydro ros-by-example Repository
 ####5.2.3 Cloning the rbx1 repository for Hydro
-```$ cd ~/catkin_ws/src
-$ git clone https://github.com/pirobot/rbx1.git
-$ cd rbx1
-$ git checkout hydro-devel
-$ cd ~/catkin_ws
-$ catkin_make```
+	$ cd ~/catkin_ws/src
+	$ git clone https://github.com/pirobot/rbx1.git
+	$ cd rbx1
+	$ git checkout hydro-devel
+	$ cd ~/catkin_ws
+	$ catkin_make
 ##Create a map with gmapping
 
 In the rbx1_nav package paste the following launch files (located in /rplidar_gmapping folder)
@@ -63,7 +63,7 @@ In the rbx1_nav package paste the following launch files (located in /rplidar_gm
 
 	roslaunch turtlebot_teleop keyboard_teleop.launch
 
-navigate slowly with the teleoperation to create the map
+	**navigate slowly with the teleoperation to create the map**
 
 ###save the map
 	
@@ -79,7 +79,7 @@ Copy the map created previously (example with arena.pgm and arena.yaml files) in
 
 	roslaunch turtlebot_le2i remap_rplidar_minimal.launch
 
-	!!! NB: remapping /mobile_base/commands/velocity to cmd_vel !!!
+	__!!! NB: remapping /mobile_base/commands/velocity to cmd_vel !!!__
 
 	roslaunch rbx1_nav tb_demo_amcl.launch map:=arena.yaml
 
