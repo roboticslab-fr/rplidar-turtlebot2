@@ -6,10 +6,12 @@ We performed some updates on our Workstations and TurtleBot2 Netbooks.
 Every workstations and netbooks are now configured with ROS HYDRO.
 
 Workspaces are configured to have catkin and rosbuild working alongside.
+
 More infos on catkin http://wiki.ros.org/catkin/Tutorials
+
 The workspaces are :
-- for catkin ~/ros/hydro/catkin_ws
-- for rosbuild ~/ros/hydro/hydro_workspace
+	- for catkin ~/ros/hydro/catkin_ws
+	- for rosbuild ~/ros/hydro/hydro_workspace
 
 NB: On the workstations you will now use catkin for compilation as the ROS by Example code for Hydro is using catkin.
 
@@ -19,6 +21,7 @@ In order to create a Map and then perform autonomous navigation follow carrefull
 
 Download the catkin packages and study the 2 howto files located :
 - at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
+
 (or on our lab NAS : //roboticsprojects/Documentation/RP-LiDAR/)
 
 ##Install the ROS-BY-EXAMPLE code for HYDRO
