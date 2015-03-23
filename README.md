@@ -18,8 +18,8 @@ In order to create a Map and then perform autonomous navigation follow carrefull
 ##LiDAR integration on the TurtleBot2
 
 Download the catkin packages and study the 2 howto files located :
-- on our lab NAS : //roboticsprojects/Documentation/RP-LiDAR/
-- or at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
+- at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
+(or on our lab NAS : //roboticsprojects/Documentation/RP-LiDAR/)
 
 ##Install the ROS-BY-EXAMPLE code for HYDRO
 Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.1 for HYDRO and follow instructions from the following sub-chapters.
@@ -38,15 +38,19 @@ Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.
 
 ###5.2 Cloning the Hydro ros-by-example Repository
 ####5.2.3 Cloning the rbx1 repository for Hydro
-	cd ~/catkin_ws/src
+	cd ~/ros/hydro/catkin_ws/src
 	git clone https://github.com/pirobot/rbx1.git
 	cd rbx1
 	git checkout hydro-devel
-	cd ~/catkin_ws
+	cd ~/ros/hydro/catkin_ws
 	catkin_make
+	rospack profile
+
+**NB: the last command "rospack profile" is not mandatory but is useful to force a full crawl of package directories to be indexed.**
+
 ##Create a map with gmapping
 
-In the rbx1_nav package paste the following launch files (located in /rplidar_gmapping folder)
+Copy the following files located in ../rplidar_gmapping folder to the ../rbx1_nav/launch folder:
 - rplidar_gmapping_demo.launch
 - rplidar_gmapping.launch
 
@@ -67,9 +71,9 @@ In the rbx1_nav package paste the following launch files (located in /rplidar_gm
 
 ###save the map
 	
-	rosrun map_server map_saver -f my_map
+	rosrun map_server map_saver -f arena
 
->where "my_map" can be any name you like. This will save the generated map into the current directory under the name you specified on the command line. If you look at the contents of the rbx1_nav/maps directory, you will see two new files: my_map.pgm which is the map image and my_map.yaml that describes the dimensions of the map. 
+>where "arena" can be any name you like. This will save the generated map into the current directory under the name you specified on the command line. If you look at the contents of the directory, you will see two new files: arena.pgm which is the map image and arena.yaml that describes the dimensions of the map. 
 
 ##Navigate autonomously in a map
 Copy the map created previously (example with arena.pgm and arena.yaml files) in the .../rbx1_nav/maps folder
