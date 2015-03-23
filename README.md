@@ -20,12 +20,14 @@ In order to create a Map and then perform autonomous navigation follow carrefull
 Download the catkin packages and study the 2 howto files located :
 - on our lab NAS : //roboticsprojects/Documentation/RP-LiDAR/
 - or at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
+
 Note that '~/catkin_ws' is the directory of catkin workspace in your computer.
 
 	cd ~/catkin_ws/src
 	git clone https://github.com/roboticslab-fr/rplidar-turtlebot2.git
 
 Build the rplidar package and configure new installed package
+
 	cd ~/catkin_ws
 	catkin_make
 	rospack profile
@@ -57,6 +59,7 @@ Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.
 ##Create a map with gmapping
 
 Copy the two following launch files in '../rplidar_gmapping' folder to '../rbx1_nav' folder in rbx1 package path.
+
 - rplidar_gmapping_demo.launch
 - rplidar_gmapping.launch
 
