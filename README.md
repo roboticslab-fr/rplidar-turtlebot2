@@ -6,10 +6,12 @@ We performed some updates on our Workstations and TurtleBot2 Netbooks.
 Every workstations and netbooks are now configured with ROS HYDRO.
 
 Workspaces are configured to have catkin and rosbuild working alongside.
+
 More infos on catkin http://wiki.ros.org/catkin/Tutorials
+
 The workspaces are :
-- for catkin ~/ros/hydro/catkin_ws
-- for rosbuild ~/ros/hydro/hydro_workspace
+	- for catkin ~/ros/hydro/catkin_ws
+	- for rosbuild ~/ros/hydro/hydro_workspace
 
 NB: On the workstations you will now use catkin for compilation as the ROS by Example code for Hydro is using catkin.
 
@@ -19,9 +21,21 @@ In order to create a Map and then perform autonomous navigation follow carrefull
 
 Download the catkin packages and study the 2 howto files located :
 - at GitHub repository : https://github.com/roboticslab-fr/rplidar-turtlebot2.git
+
 (or on our lab NAS : //roboticsprojects/Documentation/RP-LiDAR/)
 
-##Install the ROS-BY-EXAMPLE code for HYDRO
+Note that '~/catkin_ws' is the directory of catkin workspace in your computer.
+
+	cd ~/catkin_ws/src
+	git clone https://github.com/roboticslab-fr/rplidar-turtlebot2.git
+
+Build the rplidar package and configure new installed package
+
+	cd ~/catkin_ws
+	catkin_make
+	rospack profile
+
+##Install the ROS-BY-EXAMPLE code for HYDRO (On both Notebook and Work station)
 Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.1 for HYDRO and follow instructions from the following sub-chapters.
 
 ###5.1 Installing the Prerequisites
@@ -50,7 +64,8 @@ Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.
 
 ##Create a map with gmapping
 
-Copy the following files located in ../rplidar_gmapping folder to the ../rbx1_nav/launch folder:
+Copy the two following launch files in '../rplidar_gmapping' folder to '../rbx1_nav' folder in rbx1 package path.
+
 - rplidar_gmapping_demo.launch
 - rplidar_gmapping.launch
 
