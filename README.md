@@ -1,5 +1,11 @@
 #RP-LiDAR on TurtleBot2 with ROS INDIGO
 
+## References
+
+https://github.com/robopeak/rplidar_ros/wiki
+
+http://wiki.ros.org/rplidar
+
 ##LiDAR integration on the TurtleBot2
 
 Download the catkin packages
