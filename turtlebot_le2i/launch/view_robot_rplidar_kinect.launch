@@ -1,0 +1,8 @@
+<!--
+  Used for visualising turtlebot in action with both rplidar and kinect running !
+  
+  It requires rplidar_minimal.launch and rplidar_3dsensor.launch to already be up and running.
+ -->
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_le2i)/rviz/robot_rplidar_kinect.rviz" />
+</launch>

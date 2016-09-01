@@ -1,0 +1,11 @@
+<launch>
+	<arg name="base"/>
+	<arg name="stacks"/>
+	<arg name="rplidar_sensor"/>
+	
+	<include file="$(find turtlebot_le2i)/launch/includes/description.launch.xml">
+		<arg name="base" value="$(arg base)" />
+		<arg name="stacks" value="$(arg stacks)" />
+		<arg name="rplidar_sensor" value="$(arg rplidar_sensor)"/>
+	</include>
+</launch>
