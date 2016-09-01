@@ -1,21 +1,4 @@
-#RP-LiDAR on TurtleBot2 with ROS HYDRO
-
-##Notes
-We performed some updates on our Workstations and TurtleBot2 Netbooks.
-
-Every workstations and netbooks are now configured with ROS HYDRO.
-
-Workspaces are configured to have catkin and rosbuild working alongside.
-
-More infos on catkin http://wiki.ros.org/catkin/Tutorials
-
-The workspaces are :
-	- for catkin ~/ros/hydro/catkin_ws
-	- for rosbuild ~/ros/hydro/hydro_workspace
-
-NB: On the workstations you will now use catkin for compilation as the ROS by Example code for Hydro is using catkin.
-
-In order to create a Map and then perform autonomous navigation follow carrefully the following steps.
+#RP-LiDAR on TurtleBot2 with ROS INDIGO
 
 ##LiDAR integration on the TurtleBot2
 
@@ -35,8 +18,8 @@ Build the rplidar package and configure new installed package
 	catkin_make
 	rospack profile
 
-##Install the ROS-BY-EXAMPLE code for HYDRO (On both Notebook and Work station)
-Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.1 for HYDRO and follow instructions from the following sub-chapters.
+##Install the ROS-BY-EXAMPLE code for INDIGO (On both Notebook and Work station)
+Study the chapter "5. INSTALLING THE ROS-BY-EXAMPLE CODE" of ROS-BY-EXAMPLE vol.1 for INDIGO and follow instructions from the following sub-chapters.
 
 ###5.1 Installing the Prerequisites
 	sudo apt-get install ros-hydro-turtlebot-* \
