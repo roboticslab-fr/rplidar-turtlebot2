@@ -1,0 +1,8 @@
+<!--
+  Used for visualising turtlebot in action with rplidar !
+  
+  It requires rplidar_minimal.launch to already be up and running.
+ -->
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_le2i)/rviz/robot_rplidar.rviz" />
+</launch>
