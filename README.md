@@ -37,4 +37,24 @@ Launch the script provided in the rplidar_ros package and it will automatically 
 
 	./create_udev_rules.sh
 	enter user password when prompted
+
+## Test the LiDAR
+
+On the turtlebot netbook
+
+	roslaunch turtlebot_le2i rplidar_minimal.launch
 	
+On the workstation
+
+	roslaunch turtlebot_le2i view_robot_rplidar.launch
+	
+## Test LiDAR + Kinect
+
+On the turtlebot netbook
+
+	roslaunch turtlebot_le2i rplidar_minimal.launch
+	roslaunch turtlebot_le2i rplidar_3dsensor.launch
+	
+On the workstation	
+
+	roslaunch turtlebot_le2i view_robot_rplidar_kinect.launch
