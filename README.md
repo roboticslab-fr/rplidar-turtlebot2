@@ -90,7 +90,7 @@ Refer to the following chapters of the [ROS By Example vol.1](http://www.lulu.co
 - 8.5.2 Using amcl with a Real Robot
 
 ### On the turtlebot netbook
-Remapping is mandatory to ensure the compatibility with ROS By Example vol1. source code examples (examples are pusblishing Twist messages to /cmd_vel topic).
+Remapping is mandatory to ensure the compatibility with ROS By Example vol1. source code examples (examples are publishing Twist messages to /cmd_vel topic).
 It is smarter to use the Command Velocity Multiplexer of the TurtleBot2 instead of publishing directly to
 "mobile_base/commands/velocity"
 
