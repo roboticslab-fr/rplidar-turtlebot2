@@ -8,11 +8,11 @@ http://wiki.ros.org/rplidar
 
 ##LiDAR integration on the TurtleBot2
 
+### Package installation
+
 Download the catkin packages
 
-(or on our lab NAS : //roboticsprojects/Documentation/RP-LiDAR/)
-
-Note that '~/catkin_ws' is the directory of catkin workspace in your computer.
+Note that '~/catkin_ws' is the directory of catkin workspace in your computer. Adapt the syntax wrt the workspace setting of your machine.
 
 	cd ~/catkin_ws/src
 	git clone https://github.com/roboticslab-fr/rplidar-turtlebot2.git
@@ -22,6 +22,21 @@ Build the rplidar package and configure new installed package:
 	cd ~/catkin_ws
 	catkin_make
 	rospack profile
+	
+### Package update
+
+Do the following if you want to update the package from the git repository:
+
+Move to the ~/catkin_ws/src/rplidar-turtlebot2 folder
+
+Pull the new updated files from the github repository
+
+	git pull
+	
+Compile again
+
+	cd ~/catkin_ws
+	catkin_make
 
 ## Setup rules for USB connection
 
@@ -40,22 +55,26 @@ Launch the script provided in the rplidar_ros package and it will automatically 
 
 ## Test the LiDAR
 
-On the turtlebot netbook
+Do the following to test if your RP-LiDAR is correctly installed on your TurtleBot
+
+### On the turtlebot netbook
 
 	roslaunch turtlebot_le2i rplidar_minimal.launch
 	
-On the workstation
+### On the workstation
 
 	roslaunch turtlebot_le2i view_robot_rplidar.launch
 	
 ## Test LiDAR + Kinect
 
-On the turtlebot netbook
+Do the following to test if your RP-LiDAR is correctly installed alongside your Kinect RGB-D sensor on your TurtleBot
+
+### On the turtlebot netbook
 
 	roslaunch turtlebot_le2i rplidar_minimal.launch
 	roslaunch turtlebot_le2i rplidar_3dsensor.launch
 	
-On the workstation	
+### On the workstation	
 
 	roslaunch turtlebot_le2i view_robot_rplidar_kinect.launch
 
@@ -71,6 +90,9 @@ Refer to the following chapters of the [ROS By Example vol.1](http://www.lulu.co
 - 8.5.2 Using amcl with a Real Robot
 
 ### On the turtlebot netbook
+Remapping is mandatory to ensure the compatibility with ROS By Example vol1. source code examples (examples are pusblishing Twist messages to /cmd_vel topic).
+It is smarter to use the Command Velocity Multiplexer of the TurtleBot2 instead of publishing directly to
+"mobile_base/commands/velocity"
 
 	roslaunch turtlebot_le2i remap_rplidar_minimal.launch
 
