@@ -58,3 +58,29 @@ On the turtlebot netbook
 On the workstation	
 
 	roslaunch turtlebot_le2i view_robot_rplidar_kinect.launch
+
+## Use the LiDAR with the ROS By Example code
+
+We give here an example on how to start the TurtleBot with the RP-LiDAR and perform [navigation](http://wiki.ros.org/navigation/Tutorials/RobotSetup) and localization using a map and [amcl](http://wiki.ros.org/amcl).
+
+ROS uses the amcl package to localize the robot within an existing map using the current scan data coming from the RP-LiDAR.
+
+Refer to the following chapters of the [ROS By Example vol.1](http://www.lulu.com/shop/r-patrick-goebel/ros-by-example-indigo-volume-1/ebook/product-23032353.html)  book for further details:
+
+- 8.5 Navigation and Localization using a Map and amcl
+- 8.5.2 Using amcl with a Real Robot
+
+### On the turtlebot netbook
+
+	roslaunch turtlebot_le2i remap_rplidar_minimal.launch
+
+We assume that you have already created a map of the environment called *laboratory_map.yaml* in the directory *.../rbx1_nav/maps*
+Launch the tb_demo_amcl.launch file with the map as an argument:
+	
+	roslaunch rbx1_nav tb_demo_amcl.launch map:=laboratory_map.yaml
+		
+### On the workstation
+
+Start RViz with the included navigation test configuration file:
+
+	rosrun rviz rviz -d `rospack find rbx1_nav`/nav_test.rviz
