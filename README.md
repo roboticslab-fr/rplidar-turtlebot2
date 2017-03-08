@@ -1,6 +1,12 @@
 #RP-LiDAR on TurtleBot2 with ROS INDIGO
 
+![http://www.robotshop.com](http://www.robotshop.com/media/files/images2/rplidar-360-laser-scanner-7-large.jpg  "http://www.robotshop.com")
+
+Buy @Robotshop.com
+
 ## References
+
+http://www.slamtec.com/en/Lidar/A1
 
 https://github.com/robopeak/rplidar_ros/wiki
 
